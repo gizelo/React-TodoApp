@@ -1,13 +1,173 @@
+* {
+    transition: all .3s;
+    color: #1b1b1b;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    min-width: 425px;
+    font-size: 20px;
+    background-color: #1b1b1b;
+    color: #1b1b1b;
+
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* loading styles */
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* loading styles */
+
+.wrapper {
+    margin: 5rem auto;
+    max-width: 600px;
+    padding: 1rem 5rem;
+    background-color: #252525;
+    border-radius: 20px;
+}
+
+.app-header {
+    font-size: 40px;
+    color: white;
+    display: inline-block;
+}
+
+.todo-list {
+    border-top: 1px solid white;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.todo-item {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.todo-item__rm {
+    border: 1px solid #1b1b1b;
+    border-radius: 100%;
+    background-color: white;
+    font-size: 20px;
+    outline: none;
+}
+
+.todo-item__rm:hover {
+    border-color: #d23434;
+    background-color: #d23434;
+    color: white;
+    cursor: pointer;
+}
+
+.todo-item__cb {
+    margin-right: 1rem;
+}
+
+.todo-item--done {
+    text-decoration: line-through;
+}
+
+.addTodo-form {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.addTodo-input {
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-right: 1rem;
+    outline: none;
+    font-size: 20px;
+    padding: .5rem 1rem;
+    width: 100%;
+}
+
+.addTodo-btn {
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: white;
+    font-size: 20px;
+    outline: none;
+    margin-right: 1rem;
+    padding: .5rem 1rem;
+    min-width: 50px;
+}
+
+.addTodo-btn:hover {
+    border-color: #2dab2d;
+    background-color: #2dab2d;
+    color: white;
+    cursor: pointer;
+}
+
+.delAll_btn {
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: white;
+    font-size: 15px;
+    outline: none;
+    padding: .7rem .5rem;
+    min-width: 100px;
+}
+
+.delAll_btn:hover {
+    border-color: #d23434;
+    background-color: #d23434;
+    color: white;
+    cursor: pointer;
 }
